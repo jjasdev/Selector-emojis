@@ -78,7 +78,7 @@ main{
 .encuesta__texto{
     color: var(--text-color);
     font-family: 'Montserrat';
-    font-size: 2rem;
+    font-size: 1.75rem;
     margin-bottom: 3rem;
     text-align: center;
 }
@@ -136,25 +136,36 @@ main{
 .encuesta__resultado {
     color: var(--color-error);
 }
+.footer {
+    color: var(--color-white);
+    font-weight: 500;
+}
+.footer__copy-jjasdev {
+    color: var(--primary-color);
+}
+
+/* 
+ INPUT RANGE
+*/
 
 input[type='range'] {
     display: block;
     width: 100%;
     cursor: pointer;
     border-radius: 30%;
-  }
-  
-  input[type='range']:focus {
+}
+
+input[type='range']:focus {
     outline: none;
-  }
-  
-  input[type='range'],
-  input[type='range']::-webkit-slider-runnable-track,
-  input[type='range']::-webkit-slider-thumb {
+}
+
+input[type='range'],
+input[type='range']::-webkit-slider-runnable-track,
+input[type='range']::-webkit-slider-thumb {
     -webkit-appearance: none;
-  }
-  
-  input[type=range]::-webkit-slider-thumb {
+}
+
+input[type=range]::-webkit-slider-thumb {
     background-image: url(../assets/imgs/1.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -163,53 +174,44 @@ input[type='range'] {
     width: 50px;
     height: 50px;
     margin-top: -20px
-  }
-  
-  input[type=range]::-moz-range-thumb {
+}
+
+input[type=range]::-moz-range-thumb {
     background-image: url(../assets/imgs/1.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 50px;
     height: 50px;
-  }
-  
-  input[type=range]::-ms-thumb {
+}
+
+input[type=range]::-ms-thumb {
     background-image: url(../assets/imgs/1.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 50px;
     height: 50px;
-  }
-  
-  input[type=range]::-webkit-slider-runnable-track {
-      -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
     background-color: var(--background-primary-color);
     height: 8px;    
-  }
-  
-  input[type=range]:focus::-webkit-slider-runnable-track {
-    outline: none;
-  }
-  
-  input[type=range]::-moz-range-track {
-    -webkit-appearance: none;
-    background-color: var(--background-primary-color);
-    height: 8px;
-  }
-  
-  input[type=range]::-ms-track {
-    -webkit-appearance: none;
-    background-color: var(--background-primary-color);
-    height: 8px;
-  }
-
-
-.footer {
-    color: var(--color-white);
-    font-weight: 500;
 }
-.footer__copy-jjasdev {
-    color: var(--primary-color);
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    outline: none;
+}
+
+input[type=range]::-moz-range-track {
+    -webkit-appearance: none;
+    background-color: var(--background-primary-color);
+    height: 8px;
+}
+
+input[type=range]::-ms-track {
+    -webkit-appearance: none;
+    background-color: var(--background-primary-color);
+    height: 8px;
 }

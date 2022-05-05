@@ -1,15 +1,31 @@
+/**
+ * @fileoverview Interactividad Emoji Slider range
+ * @version 0.1
+ * @author Juanjo Alonso Sánchez <jj.alonso@esla.com>
+ * @copyright cgb@esla.com
+ */
+ "use strict";
+
 const range = document.querySelector('.encuesta__input-range');
 const containerEmojis = document.querySelector('.encuesta__emoji');
 const containerValores = document.querySelector('.encuesta__valores');
 const resultado = document.querySelector('.encuesta__resultado');
 const nota = document.querySelector('.encuesta__nota');
+/**
+  * Objeto que contiene todos los valores de las valoraciones
+  * @type {Object}
+  */
 const valoraciones = {
     deficiente: 'rgba(255,0,9,1)',
     regular: 'rgba(255,111,0,1)',
     aceptable: 'rgba(255,168,0,1)',
     excelente: 'rgba(58,181,164,1)'
 }
-
+/**
+  * Obtiene las propiedades del Objeto valoraciones
+  * @param {number} indice Indice de la key
+  * @returns {string}
+  */
 function obtenerKeyValoraciones (indice) {
     let contador = 0;
     for (let key in valoraciones) { 
@@ -20,12 +36,13 @@ function obtenerKeyValoraciones (indice) {
     }
 }
 
+//Creamos el nodo estilos para guardar las nuevas modificaciones del input range
 let style = document.createElement('style');
 document.head.appendChild(style);
-//Damos valor a la barra de progreso del range
-range.style.setProperty("--value", range.value);
 
 if (range) {
+    //Damos valor a la barra de progreso del range
+    range.style.setProperty("--value", range.value);
     range.addEventListener('input', (e) => {
         let step = 11.1;
         let rangeValue = (e.target.value / step) + 1;        
