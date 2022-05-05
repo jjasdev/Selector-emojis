@@ -1,0 +1,192 @@
+:root{
+    --primary-color: #3ab5a4;    
+    --background-primary-color: #222e33; 
+    --background-secondary-color: #f6f6f6;   
+    --border-color: #d6d6d6;
+    --title-color: #0d0d0d;
+    --text-color: #3c3c3c;
+    --color-white: #fff;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+html, body{
+    height: 100vh;
+    width: 100%
+}
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Raleway', sans-serif;
+    min-width: 20rem
+}
+p, label{
+    color: var(--text-color);
+    font-weight: 500
+}
+header, footer{
+    align-items: center;
+    background-color: var(--background-primary-color);
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem
+}
+.header__logo img{
+    height: auto;
+    transition: width .3s ease;
+    width: max-content
+}
+.header-logo__svg {
+    height: 3rem;
+    width: auto;
+    transition: width .3s ease;
+}
+.header-logo__svg-primary {
+    fill:var(--primary-color);
+}
+.header-logo__svg-j {
+    fill:var(--color-white);
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 3rem
+}
+.encuesta {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5rem;
+    width: 100%;
+}
+@media screen and (max-width: 596px) {
+    .encuesta {
+        padding: 0 1rem;
+    }
+}
+.encuesta__titulo{
+    color: var(--title-color);
+    font-family: 'Montserrat';
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.encuesta__emoji {
+    font-size: 3rem;
+    text-align: center;
+    width: 100%;
+}
+.encuesta__input-range {
+    width: 100%;
+    margin: 0 10px;
+}
+.encuesta__slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.encuesta__rangos {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    height: auto;
+    color: var(--text-color)
+}
+.encuesta__valores {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 1rem;
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--title-color)
+}
+.encuesta__valor {
+    font-weight: bold;
+}
+.encuesta__valor--hide {
+    visibility: hidden;
+}
+
+input[type='range'] {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 30%;
+    transform: translateX(-10px);
+  }
+  
+  input[type='range']:focus {
+    outline: none;
+  }
+  
+  input[type='range'],
+  input[type='range']::-webkit-slider-runnable-track,
+  input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+  
+  input[type=range]::-webkit-slider-thumb {
+    background-image: url(../assets/imgs/5.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: drop-shadow(2px 1px 1px rgba(0, 0, 0, 0.25));
+    width: 50px;
+    height: 50px;
+    margin-top: -20px
+  }
+  
+  input[type=range]::-moz-range-thumb {
+    background-image: url(../assets/imgs/5.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+  }
+  
+  input[type=range]::-ms-thumb {
+    background-image: url(../assets/imgs/5.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+  }
+  
+  input[type=range]::-webkit-slider-runnable-track {
+    background-color: var(--background-primary-color);
+    height: 8px;    
+    -webkit-appearance: none;
+    background-image:linear-gradient(to right, var(--primary-color) calc(var(--value)*1%), var(--background-primary-color) 0);
+  }
+  
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    outline: none;
+  }
+  
+  input[type=range]::-moz-range-track {
+    -webkit-appearance: none;
+    background-image:linear-gradient(to right, var(--primary-color) calc(var(--value)*1%), var(--background-primary-color) 0);
+    height: 8px;
+  }
+  
+  input[type=range]::-ms-track {
+    background-color: var(--background-primary-color);
+    height: 8px;
+  }
+
+
+.footer {
+    color: var(--color-white);
+    font-weight: 500;
+}
+.footer__copy-jjasdev {
+    color: var(--primary-color);
+}
