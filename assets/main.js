@@ -22,6 +22,15 @@ const valoraciones = {
     excelente: 'rgba(58,181,164,1)'
 }
 /**
+  * Establece el año en el footer
+  * @returns {void}
+  */
+ function establecerYear(){ 
+    const today = new Date();
+    const nodoYear = document.querySelector(".footer__copy-year"); 
+    nodoYear.innerHTML = today.getFullYear();
+}
+/**
   * Obtiene las propiedades del Objeto valoraciones
   * @param {number} indice Indice de la key
   * @returns {string}
@@ -35,7 +44,8 @@ function obtenerKeyValoraciones (indice) {
         contador ++;
     }
 }
-
+//CÓDIGO
+establecerYear();
 //Creamos el nodo estilos para guardar las nuevas modificaciones del input range
 let style = document.createElement('style');
 document.head.appendChild(style);
