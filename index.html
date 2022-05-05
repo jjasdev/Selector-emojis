@@ -46,11 +46,16 @@
     <main>
         <section class="encuesta">
             <h1 class="encuesta__titulo">Encuesta</h1>
-            <div class="encuesta__slider">
-              <p class="encuesta__rangos"><span>1</span><span>10</span></p>
-              <input class="encuesta__input-range" type="range" value="50" min="0" max="100" step="10">
-              <p class="encuesta__valores"></p>
-            </div>
+            <p class="encuesta__texto">¿Cómo de interesante te ha resultado este ejemplo?</p>
+            <div class="encuesta__slider">              
+              <p class="encuesta__rangos">1</p>
+              <input class="encuesta__input-range" type="range" value="0" min="0" max="100" step="11.1">
+              <p class="encuesta__rangos">10</p>
+            </div>    
+            <div class="encuesta__resumen">
+                <p class="encuesta__resultado">deficiente</p>
+                <p class="encuesta__nota"></p>
+            </div>      
         </section>
     </main>
     <footer class="footer">
